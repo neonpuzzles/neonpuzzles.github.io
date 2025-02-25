@@ -7,8 +7,12 @@ Variables
 :root {
   --colour-white: #fff;
   --colour-aqua: rgb(201, 237, 234);
+  --colour-aqua-neon: rgb(0, 210, 227);
   --colour-purple: rgb(162, 162, 225);
+  --colour-purple-neon: rgb(111, 77, 219);
+  --colour-purple-dark: rgb(88, 43, 210);
   --colour-pink: rgb(242, 180, 210);
+  --colour-pink-neon: rgb(250, 125, 201);
   --spacing: 0.05rem;
   --max-width: 1170px;
   --fixed-width: 450px;
@@ -36,15 +40,24 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: solid underline var(--colour-aqua-neon) 0.5rem;
+
+  &:hover {
+    background-color: var(--colour-aqua);
+  }
+
+  &:visited {
+    color: var(--colour-purple-dark);
+  }
 }
+
 h1,
 h2,
 h3 {
   letter-spacing: var(--spacing);
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  color: var(--colour-pink);
+  color: var(--colour-pink-neon);
 }
 h1 {
   font-size: 3rem;
@@ -108,5 +121,5 @@ main {
   background: var(--colour-white);
   border-radius: var(--radius);
   padding: 1.5rem 1.5rem;
-  color: var(--colour-purple);
+  color: var(--colour-purple-neon);
 }
